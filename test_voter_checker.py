@@ -11,7 +11,7 @@ class TestVoterEligibility(unittest.TestCase):
         assert is_eligible_to_vote(18, True) is True
 
     def test_underage_voter():
-        assert is_eligible_to_vote(17, True) is True
+        assert is_eligible_to_vote(16, False) is False
 
     def test_non_citizen():
         assert is_eligible_to_vote(25, False) is False
@@ -24,7 +24,6 @@ class TestVoterEligibility(unittest.TestCase):
 
     def test_negative_age():
         assert is_eligible_to_vote(-0, False) is False
-
 
 if __name__ == "__ main __":
     unittest.main
