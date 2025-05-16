@@ -5,7 +5,6 @@ class TestVoterEligibility(unittest.TestCase):
     def test_valid_voter(self):
         self.assertTrue(is_eligible_to_vote(18, True))
 
-
     def test_eligible_voter():
         assert is_eligible_to_vote(20, True) is True
         assert is_eligible_to_vote(18, True) is True
@@ -25,6 +24,7 @@ class TestVoterEligibility(unittest.TestCase):
 
     def test_negative_age():
         assert is_eligible_to_vote(-0, False) is False
+
 
 if __name__ == "__ main __":
     unittest.main
