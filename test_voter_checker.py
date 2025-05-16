@@ -5,6 +5,7 @@ class TestVoterEligibility(unittest.TestCase):
     def test_valid_voter(self):
         self.assertTrue(is_eligible_to_vote(18, True))
 
+
     def test_eligible_voter():
         assert is_eligible_to_vote(20, True) is True
         assert is_eligible_to_vote(18, True) is True
