@@ -7,22 +7,22 @@ class TestVoterEligibility(unittest.TestCase):
         self.assertTrue(is_eligible_to_vote(18, True))
 
     def test_eligible_voter(self):
-        self.assert is_eligible_to_vote(20, True) is True
+        self.assertTrue (is_eligible_to_vote(20, True))
         
     def test_underage_voter(self):
-        self.assert is_eligible_to_vote(16, False) is False
+        self.assertFalse (is_eligible_to_vote(16, False))
 
     def test_non_citizen(self):
-        self.assert is_eligible_to_vote(25, False) is False
+        self.assertFalse (is_eligible_to_vote(25, False))
 
     def test_underage_and_non_citizen(self):
-        self.assert is_eligible_to_vote(16, False) is False
+        self.assertFalse (is_eligible_to_vote(16, False))
 
     def test_exactly_18_and_non_citizen(self):
-        self.assert is_eligible_to_vote(18, True) is True
+        self.assertTrue (is_eligible_to_vote(18, True))
 
     def test_negative_age(self):
-        self.assert is_eligible_to_vote(-0, False) is False
+        self.assert (is_eligible_to_vote(-0, False))
 
 if __name__ == "__ main __":
     unittest.main
